@@ -1,0 +1,14 @@
+<html>
+<head><title>Test</title></head>
+<body>
+<h1>Test</h1>
+<form>
+<fieldset>
+Hello: <input type="text" name="place" value="world"><br>
+This is: <input type="text" name="who" value="me"><br>
+Sì <input type="radio" value="S" name="test" checked="checked"  >
+No<input type="radio" value="N" name="test" checked="checked"  >
+</fieldset>
+</form>
+</body>
+</html>

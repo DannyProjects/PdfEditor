@@ -1,0 +1,57 @@
+<html>
+<head>
+<style type="text/css">
+@font-face {
+    font-family: 'Fira Sans';
+    src: local('FiraSans-Regular'),
+    url('/media/fonts/FiraSans-Regular.woff2') format('woff2');
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+</style>
+<title>Test</title></head>
+<body>
+<h1>Equifax</h1>
+<form>
+<!-- <fieldset>
+Modificacón: <input type="text" name="place" value="Pdf"><br>
+Dinámico: <input type="text" name="who" value="desde Html"><br>
+Sí <input type="radio" value="S" name="test" checked="checked"  >
+No<input type="radio" value="N" name="test" checked="checked"  >
+</fieldset> -->
+
+<fieldset>
+    <legend>Select a maintenance drone</legend>
+
+    <div>
+        <input type="radio" id="huey" name="drone" checked />
+        <label for="huey">Huey</label>
+    </div>
+
+    <div>
+        <input type="radio" id="dewey" name="drone" />
+        <label for="dewey">Dewey</label>
+    </div>
+
+    <div>
+        <input type="radio" id="louie" name="drone" />
+        <label for="louie">Louie</label>
+    </div>
+
+</fieldset>
+
+</form>
+</body>
+</html>

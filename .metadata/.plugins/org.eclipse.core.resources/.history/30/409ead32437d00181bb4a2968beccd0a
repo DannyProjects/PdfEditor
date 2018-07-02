@@ -1,0 +1,34 @@
+
+import java.io.File;
+import java.io.IOException;
+
+import com.itextpdf.html2pdf.ConverterProperties;
+import com.itextpdf.html2pdf.HtmlConverter;
+//import com.itextpdf.licensekey.LicenseKey;
+
+public class PdfEditor {
+
+	/** The Base URI of the HTML page. */
+	public static final String BASEURI = "src/main/resources/html/";
+	/** The path to the source HTML file. */
+	public static final String SRC = String.format("%sform.html", BASEURI);
+	/** The target folder for the result. */
+	public static final String TARGET = "target/results/ch07/";
+	/** The path to the resulting PDF file. */
+	public static final String DEST = String.format("%sform_acroform.pdf", TARGET);
+	
+	public void main() throws IOException{
+		
+		 File file = new File(TARGET);
+	        file.mkdirs();
+	        this.createPdf(SRC, DEST);
+		
+	}
+
+    public void createPdf(String src, String dest) throws IOException {
+    	ConverterProperties properties = new ConverterProperties();
+    	properties.setCreateAcroForm(true);
+        HtmlConverter.convertToPdf(new File(src), new File(dest), properties);
+    }
+	
+}
